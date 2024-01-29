@@ -12,7 +12,7 @@ console.log(x,y)
 let a=10;
 let b="10";
 if(a!==b){
-    console.log("vrai")
+    console.log("ooook")
 }
 
 let statut="etudiant";
