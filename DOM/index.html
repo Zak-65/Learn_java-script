@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        position: relative;
+      }
+      div {
+        border: solid 3px;
+        height: 40vh;
+        width: 100%;
+        border-radius: 20px;
+      }
+      form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      input {
+        border: solid 2px;
+        text-align: center;
+        border-radius: 10px;
+      }
+      p {
+        font-size: 20px;
+      }
+      .jeux{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <form>
+        <input class="nb-un" type="number" placeholder="le premier nombre....."/>
+        <p>+</p>
+        <input class="nb-deux" type="number" placeholder="le deuxieme nombre....."/>
+        <p>=</p>
+        <input class="resultat" type="number" />
+        <button class="btn-calculer">Calculer</button>
+      </form>
+    </div>
+    <div class="jeux">
+      <p>entre un nombre entre 1 et 20</p>
+      <input class="number" type="number" placeholder="entre un nombre"/>
+      <br/>
+      <button class="btn_jeux">envoyer</button>
+      <p class="jeux-resultat">Lancer le jeux</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
