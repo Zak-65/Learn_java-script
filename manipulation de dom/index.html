@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            border-radius:10px;
+            border: solid 1px;
+            
+        }
+        form{
+            display: flex;
+            flex-direction:column;
+            width:80%;
+            justify-content:space-evenly;
+            height:80%;
+        }
+        div{
+            border-radius:20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border:solid 1px;
+            height:40vh;
+        }
+        .afficher{
+            border:solid 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manupuler DOM</h1>
+
+    <nav> 
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+    </nav>
+    <div>
+        <form>
+            <label for="nom">nom</label>
+            <input type="text">
+            <label for="prenom ">prenom</label>
+            <input type="text">
+            <label for="age">age</label>
+            <input type="number">
+            <button>ajouter</button>
+            <button>envoyer</button>
+        </form>
+    </div>
+    <div class="afficher">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
