@@ -113,3 +113,4 @@ console.log(document.title)
 document.title="Learn Pyhton"
 
 console.log(document.title)
+

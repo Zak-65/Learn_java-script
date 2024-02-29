@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Down</title>
+    <style>
+      form {
+        background-color: rgb(0, 176, 207);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      form > input {
+        width: 70%;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="text" id="test1">UserName</label>
+      <input type="text" />
+      <span></span>
+      <label for="email">Email@</label>
+      <input type="email" />
+      <label for="password">PassWord:</label>
+      <input type="password" />
+      <label for="password">PassWord:</label>
+      <input type="password" />
+      <button id="button1">envoyer</button>
+    </form>
+    <script>
+      let buttonEnvoyer = document.querySelector("button");
+// test switch case
+      let allinput = [];
+      buttonEnvoyer.addEventListener("click", (e) => {
+        e.preventDefault();
+        allinput = document.querySelectorAll("input");
+        for (let i = 0; i <= allinput.length - 1; i++) {
+          if (allinput[i].value.length > 3) {
+            allinput[i].style.border = "solid green 2px";
+            allinput[i].style.borderRadius = "5px";
+            document.querySelector("span").textContent = "";
+          } else {
+            allinput[i].style.border = "solid red 2px";
+            allinput[i].style.borderRadius = "5px";
+            document.querySelector("span").textContent =
+              "Entre plus de 3 carctere est ne pas depasser 25";
+            document.querySelector("span").style.fontSize = "0.8em";
+            document.querySelector("span").style.color = "red";
+          }
+        }
+      });
+
+      // __________________verifer tous les inputs_________________
+      // let allinput = [];
+      // buttonEnvoyer.addEventListener("click", (e) => {
+      //   e.preventDefault();
+      //   allinput = document.querySelectorAll("input");
+      //   for (let i = 0; i <= allinput.length - 1; i++) {
+      //     if (allinput[i].value.length > 3) {
+      //       allinput[i].style.border = "solid green 2px";
+      //       allinput[i].style.borderRadius = "5px";
+      //       document.querySelector("span").textContent = "";
+      //     } else {
+      //       allinput[i].style.border = "solid red 2px";
+      //       allinput[i].style.borderRadius = "5px";
+      //       document.querySelector("span").textContent =
+      //         "Entre plus de 3 carctere est ne pas depasser 25";
+      //       document.querySelector("span").style.fontSize = "0.8em";
+      //       document.querySelector("span").style.color = "red";
+      //     }
+      //   }
+      // });
+      //_____________________________________________________________________
+
+      //_____________________ verfier userName_________________________________
+      // buttonEnvoyer.addEventListener("click",(e)=>{
+      //     e.preventDefault()
+      //     let inputName = document.querySelector("input")
+      //     if((inputName.value).length >= 3){
+      //         inputName.style.border="solid green 2px"
+      //         inputName.style.borderRadius="5px"
+      //         document.querySelector("span").textContent="";
+      //     }
+      //     else{
+      //         inputName.style.border="solid red 2px"
+      //         inputName.style.borderRadius="5px"
+      //         document.querySelector("span").textContent="Entre plus de 3 carctere est ne pas depasser 25";
+      //         document.querySelector("span").style.fontSize="0.8em";
+      //         document.querySelector("span").style.color="red"
+      //     }
+      // })
+      //______________________________________________________________________________
+      // let test = document.querySelector("input")
+      // test.addEventListener("keydown",(event)=>{
+      //     if(event.keyCode===13){
+      //         console.log("key down");
+      //     }
+      // });
+      // document.addEventListener("keyup",(event)=>{
+      //     if(event.keyCode===13){
+      //         console.log("key Up");
+      //     }
+      // });
+      // document.addEventListener("keypress",()=>{
+      //     if(event.keyCode===13){
+      //         console.log("key press");
+      //     }
+      // });
+    </script>
+  </body>
+</html>
