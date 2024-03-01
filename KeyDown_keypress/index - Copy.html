@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Down</title>
+    <style>
+      form {
+        background-color: rgb(0, 176, 207);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      form > input {
+        width: 70%;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <input type="text" />
+        <button>search</button>
+      </div>
+      <label for="text" id="test1">UserName</label>
+      <input type="text" />
+      <span></span>
+      <label for="email">Email@</label>
+      <input type="email" />
+      <label for="email">CIN</label>
+      <input type="text" />
+      <label for="password">PassWord:</label>
+      <input type="password" />
+      <label for="password">PassWord:</label>
+      <input type="password" />
+      <button id="btn_save">save</button>
+      <button id="btn_reset">reset</button>
+      <!-- <select>
+        <option>casa</option>
+        <option>casa</option>
+        <option>casa</option>
+        <option>casa</option>
+        <option>casa</option>
+      </select> -->
+    </form>
+    <script>
+      // declaration variable
+      let users = [];
+      let beta_user = {};
+      let vbtn_save = document.getElementById("btn_save");
+      let allinput = [];
+      let alllabel = [];
+
+// ____________function save_value in object________________
+      function fBtn_save(i) {
+        beta_user[alllabel[i - 1].textContent] = allinput[i].value;
+      }
+// __________________verifer tous les inputs_________________
+      vbtn_save.addEventListener("click", (e) => {
+        e.preventDefault();
+        allinput = document.querySelectorAll("input");
+        alllabel = document.querySelectorAll("label");
+        for (let i = 1; i <= allinput.length - 1; i++) {
+          if (allinput[i].value.length > 3){
+            allinput[i].style.border = "solid green 2px";
+            allinput[i].style.borderRadius = "5px";
+            document.querySelector("span").textContent = "";
+            fBtn_save(i)
+          } else {
+            allinput[i].style.border = "solid red 2px";
+            allinput[i].style.borderRadius = "5px";
+            document.querySelector("span").textContent =
+              "Entre plus de 3 carctere est ne pas depasser 25";
+            document.querySelector("span").style.fontSize = "0.8em";
+            document.querySelector("span").style.color = "red";
+          }
+        }
+        users.push({...beta_user})
+        console.log(users)
+      });
+      //_____________________________________________________________________
+    </script>
+  </body>
+</html>

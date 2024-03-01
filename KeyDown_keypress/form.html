@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      form {
+        background-color: rgb(0, 176, 207);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      form > input {
+        width: 70%;
+        outline: none;
+      }
+      select {
+        width: 70%;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="text" id="test1">UserName</label>
+      <input type="text" />
+      <label for="email">Email@</label>
+      <input type="email" />
+      <label>branche</label>
+      <select>
+        <option>selectioner</option>
+        <option>DD</option>
+        <option>resaux</option>
+        <option>IA</option>
+      </select>
+      <label for="password">PassWord:</label>
+      <input type="password" />
+      <label for="password">PassWord:</label>
+      <input type="password" />
+      <span></span>
+      <button id="envoyer">envoyer</button>
+      <button id="envoyer">enregistrer</button>
+    </form>
+    <script>
+      let buttonEnvoyer = document.getElementById("envoyer");
+      // __________________verifer tous les inputs_________________
+      allselect = document.querySelector("select");
+      allselect.addEventListener("focusout", () => {
+        if (allselect.value === "selectioner") {
+          allselect.style.border = "solid 2px red";
+          allselect.style.borderRadius = "5px";
+        } else {
+          allselect.style.border = "solid green 2px ";
+          allselect.style.borderRadius = "5px";
+        }
+      });
+      let allinput = [];
+      buttonEnvoyer.addEventListener("click", (e) => {
+        e.preventDefault();
+        allinput = document.querySelectorAll("input");
+        for (let i = 0; i <= allinput.length - 1; i++) {
+          switch (allinput[i].type) {
+            case "text":
+              if (allinput[i].value.length > 3) {
+                allinput[i].style.border = "solid green 2px";
+                allinput[i].style.borderRadius = "5px";
+              } else {
+                allinput[i].style.border = "solid red 2px";
+                allinput[i].style.borderRadius = "5px";
+                console.log(allinput[i].value)
+              }
+              break;
+            case "email":
+              if (allinput[i].value.length> 3) {
+                allinput[i].style.border = "solid green 2px";
+                allinput[i].style.borderRadius = "5px";
+              } else {
+                allinput[i].style.border = "solid red 2px";
+                allinput[i].style.borderRadius = "5px";
+              }
+              break;
+            case "password":
+              if (allinput[i].value.length> 3) {
+                allinput[i].style.border = "solid green 2px";
+                allinput[i].style.borderRadius = "5px";
+              } else {
+                allinput[i].style.border = "solid red 2px";
+                allinput[i].style.borderRadius = "5px";
+              }
+              break;
+          }
+        }
+      });
+      //_____________________________________________________________________
+    </script>
+  </body>
+</html>
