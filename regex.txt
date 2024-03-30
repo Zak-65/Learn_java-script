@@ -1,0 +1,10 @@
+ moi je sois DD105 et lu sonnt ab DD106
+ ziko
+ zikooo
+ zik
+ ID204 DR320
+
+
+ ? = (0,1)
+ * = (0,n)
+ + =(1,n)

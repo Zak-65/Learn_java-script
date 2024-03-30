@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ajax exemple</title>
+  </head>
+  <body>
+    <h1>Exemple-Ajax </h1>
+    <div id="container">
+
+    </div>
+    <button id="afficher">afficher</button>
+    <button id="load">load</button>
+    <script>
+      let user;
+      let content;
+      const request = new XMLHttpRequest();
+      request.open("GET","user.json", true);
+      request.onreadystatechange = function () {
+        console.log(this.response)
+        if (this.readyState == 4 && this.status==200) {
+          data = JSON.parse(this.response);
+          user = data.user;
+          content = "<ul>";
+          content += `<li> user name :${user.nom}</li>`;
+          content += `<li> user age:${user.age}</li>`;
+          content += "</ul>";
+
+          document.getElementById("container").innerHTML=content
+        }
+      };
+      request.send();
+    </script>
+  </body>
+</html>

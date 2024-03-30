@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gestion deleve</title>
+  </head>
+  <body>
+    <h1>Gestion des Etudians</h1>
+    <label for="Recherche">Recherche</label>
+    <input type="search" id="Recherche" />
+    <button id="btn_recherche">Recherche</button>
+    <form>
+      <label for="nom">NomComplet</label>
+      <input type="text" id="nomComplet" />
+      <label for="cin">CIN</label>
+      <input type="text" id="cin" />
+      <label for="Branche">Branche</label>
+      <select name="Branche" id="branche">
+        <option value="">--selectioner Branche--</option>
+      </select>
+      <label for="Option">Option</label>
+      <select for="module" id="module"></select>
+    </form>
+    <!-- button execution -->
+    <button id="btn_enregistrer">Enregistrer</button>
+    <div id="containerAffichage"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

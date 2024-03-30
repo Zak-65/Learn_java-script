@@ -35,32 +35,48 @@
         <option>resaux</option>
         <option>IA</option>
       </select>
+      <label>Métiers</label>
+      <select>
+        <option>selectioner</option>
+        <option>DD</option>
+        <option>resaux</option>
+        <option>IA</option>
+      </select>
       <label for="password">PassWord:</label>
       <input type="password" />
       <label for="password">PassWord:</label>
       <input type="password" />
       <span></span>
       <button id="envoyer">envoyer</button>
-      <button id="envoyer">enregistrer</button>
+      <button id="save">Save</button>
     </form>
     <script>
-      let buttonEnvoyer = document.getElementById("envoyer");
-      // __________________verifer tous les inputs_________________
+      // ____________declaratin variable________
+      let btnEnvoyer = document.getElementById("envoyer");
+      let btnSave = document.getElementById("save")
       allselect = document.querySelector("select");
-      allselect.addEventListener("focusout", () => {
-        if (allselect.value === "selectioner") {
-          allselect.style.border = "solid 2px red";
-          allselect.style.borderRadius = "5px";
-        } else {
-          allselect.style.border = "solid green 2px ";
-          allselect.style.borderRadius = "5px";
-        }
-      });
       let allinput = [];
-      buttonEnvoyer.addEventListener("click", (e) => {
+      let user = {}
+      const allUsers = []
+
+// _________verifier tous les select____________
+      // allselect.addEventListener("focusout", () => {
+      //   if (allselect.value === "selectioner") {
+      //     allselect.style.border = "solid 2px red";
+      //     allselect.style.borderRadius = "5px";
+      //   } else {
+      //     allselect.style.border = "solid green 2px ";
+      //     allselect.style.borderRadius = "5px";
+      //   }
+      // });
+
+      // __________________verifer tous les inputs_________________
+      btnEnvoyer.addEventListener("click", (e) => {
         e.preventDefault();
+        
         allinput = document.querySelectorAll("input");
         for (let i = 0; i <= allinput.length - 1; i++) {
+          user[]
           switch (allinput[i].type) {
             case "text":
               if (allinput[i].value.length > 3) {
@@ -73,7 +89,9 @@
               }
               break;
             case "email":
-              if (allinput[i].value.length> 3) {
+              let patternEmail = /^[a-zA-Z0-9]{3,}@[a-zA-Z]{2,}\.[a-zA-Z]{1}[a-z]{1,2}$/
+              let result = patternEmail.test(allinput[i].value)
+              if (result===true) {
                 allinput[i].style.border = "solid green 2px";
                 allinput[i].style.borderRadius = "5px";
               } else {
@@ -93,7 +111,11 @@
           }
         }
       });
-      //_____________________________________________________________________
+      //_______________________________________________________________
+      // ________________enregistrer tous les inputs___________________
+      btnSave.addEventListener("click",(e)=>{
+        e.preventDefault()
+      })
     </script>
   </body>
 </html>

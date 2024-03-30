@@ -1,0 +1,14 @@
+{
+    "stagiaire1":{
+        "id":1,
+        "nom":"sidqui",
+        "prenom":"zakaria",
+        "age":23
+    },
+    "stagiaire2":{
+        "id":2,
+        "nom":"marzoug",
+        "prenom":"khalid",
+        "age":24
+    }
+}

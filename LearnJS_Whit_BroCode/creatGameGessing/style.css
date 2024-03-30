@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+ul {
+  display: flex;
+  gap: 20px;
+}
+#containerGame,
+#btnRestart {
+  display: none;
+}
