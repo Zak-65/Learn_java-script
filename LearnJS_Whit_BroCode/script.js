@@ -96,15 +96,22 @@
 // console.log(car1);
 
 // console.log(parseInt("5.38"));
- const test = [1, 6, 10, 7, 9, 5, 3, 2, 4, 8];
+let test = [];
 // const test1 = [...test];
 // test1.sort((a, b) =>
 //   a-b);
 // console.log(test);
 // console.log(test1);
 
-function testing() {}
-let print = null;
-print = setInterval(5000);
+// function testing() {}
+// let print = null;
+// print = setInterval(5000);
 
-console.table(test);
+// console.table(test);
+test.push(1);
+test.push(3);
+test.push(5);
+test.push(10);
+test.push(2);
+test.pop()
+console.log(test);

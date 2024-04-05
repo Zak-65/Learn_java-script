@@ -1,26 +1,29 @@
-let nom = /(dd)([0-9]{3})/gi;
+const patternEmail = /([a-z]|[0-9]){2,}@[a-z]{2,}\.[a-z]{2,}/i;
+const patternPassword =
+  /(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[@$!%*?&])[A-Za-zd@$!%*?&]{8,}/;
+const btn_envoyer = document.getElementById("valide");
 
-let prenom = new RegExp("zakaria?");
+const errorEmail = document.getElementById("show_email");
+const errorPassword = document.getElementById("show_password");
+let verifierEmail = false;
+let verifierPassword = false;
 
-const article =
-  "Lorem Zakaria cava oui et toi zakari en DD105 evec lui et autre DD103 est nous sommes avec ouiii ID101";
-// search method ====> -1 or index
-let position_search = article.search(nom);
-//Match method =====> null or array
-let position_match = article.match(nom);
-//Replace method ==> replace valur trouve avec une autre
-let position_Replace = article.replace(nom, "$1-A1-$2");
-// Split metho  "string"===>array
-let modules = "PHP/HTML-CSS_POO";
-let listModules = modules.split(/[/_]/);
-// Test method
-let tester = nom.test(article);
-// exec method
-let tester_exec = nom.exec(article);
+btn_envoyer.addEventListener("click", (e) => {
+  e.preventDefault();
 
-console.log(position_search);
-console.log(position_match);
-console.log(position_Replace);
-console.log(listModules);
-console.log(tester);
-console.log(tester_exec);
+  verifierEmail = patternEmail.test(
+    document.getElementById("inpt_email").value
+  );
+  verifierPassword = patternPassword.test(
+    document.getElementById("inpt_password").value
+  );
+
+  if (verifierEmail != true) {
+    errorEmail.innerText = "votre format email n'est pas correct";
+    errorEmail.style.color = "red";
+  }
+  if (verifierPassword != true) {
+    errorPassword.innerHTML = "votre format password n'est pas correct";
+    errorPassword.style.color = "red";
+  }
+});

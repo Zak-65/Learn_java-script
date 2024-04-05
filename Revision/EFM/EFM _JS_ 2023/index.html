@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>EFM 2023</title>
+  </head>
+  <body>
+    <button class="btn" id="btn_ajouter">Ajouter une produit</button>
+    <form class="false" id="form_ajouter">
+      <label id="codeProduit">Code Produit :</label>
+      <input aria-label="codeProduit" type="number" id="Code_produit" />
+      <label for="titre">Titre :</label>
+      <input aria-label="titre" type="text" id="titre" />
+      <label id="description">Description :</label>
+      <input aria-label="description" type="text" id="description" />
+      <label id="prix">Prix :</label>
+      <input aria-label="prix" type="number" id="prix" />
+      <!-- <button class="btn" id="btn_valide">Valider</button> -->
+      <button class="btn" id="btn_sauvegarder">Sauvegarder</button>
+      <button class="btn" id="btn_annuler">Annuler</button>
+      <button class="btn" id="btn_vider">Vider</button>
+    </form>
+    <div id="affichage"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

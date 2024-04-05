@@ -1,0 +1,13 @@
+div{
+    height:30px;
+}
+#check_form{
+    z-index:999;
+    height:300px;
+    position: fixed;
+    border-radius:300%;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display:none;
+}
