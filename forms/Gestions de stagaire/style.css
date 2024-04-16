@@ -42,7 +42,7 @@ form{
     display: flex;
     flex-direction: column;
 }
-footer{
+#affichage_cherche{
     display:none;
     text-align: center;
     background-color:rgb(235, 135, 135);
