@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#titre{
+    text-align: center;
+}
+main{
+    display: flex;
+    height:60vh;
+}
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    width:40%;
+    background-color: hsl(271, 56%, 67%);
+}
+article>section{
+    border:solid rgb(0, 0, 0);
+    border-radius:10px;
+    height:200px;
+    width:200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+}
+aside{
+    width:60%;
+    background-color:hsl(271, 56%, 47%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+form{
+    width:90%;
+    justify-content:center;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    display:none;
+    text-align: center;
+    background-color:rgb(235, 135, 135);
+    height:30vh;
+}
+#form_gestion_stagaire{
+    display: none;
+}
+#part_recherche{
+    display:none;
+}
+#rechercher_note_input{
+    display: none;
+}
