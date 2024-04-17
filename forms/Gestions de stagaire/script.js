@@ -25,7 +25,9 @@ const form_display = document.getElementById("form_gestion_stagaire");
 const part_recherche = document.getElementById("part_recherche");
 
 // function details gestion
-const totalStagiares = document.getElementById("nbr_stagiare_div");
+const totalStagiares = document.getElementById("");
+let avgStagiares = document.getElementById("avg_note_affichage")
+let total_avg = 0
 document.addEventListener(
   "DOMContentLoaded",
   () => (totalStagiares.innerHTML = stagiares.length)
@@ -94,7 +96,13 @@ btn_Send.addEventListener("click", () => {
     stagiares.push(stagiare);
     console.log(stagiare);
     console.log(stagiares);
-    totalStagiares.innerHTML = stagiares.length;
+    totalStagiares.innerHTML = `Stagaire N°: ${stagiares.length}`;
+    stagiares.forEach((element)=>{
+      total_avg = total_avg + Number(element.note)})
+    console.log(total_avg)
+    total_avg = total_avg/stagiares.length
+    avgStagiares.innerHTML=`Moyen :${total_avg.toFixed(2)}`
+    total_avg=0  
     console.log("bien ajouter");
     stagiare = {};
   } else {
@@ -125,6 +133,7 @@ note_radio.addEventListener("click", () => {
 });
 let result;
 btn_valid_cherche.addEventListener("click", () => {
+    tbody.innerHTML ="" 
   if (radio_selected === rechercher_cin_input) {
     result = stagiares.filter((element) => element.cin == radio_selected.value);
     console.log("1");
@@ -136,12 +145,8 @@ btn_valid_cherche.addEventListener("click", () => {
     console.log("2");
   }
   if (result != "") {
-    console.log(result);
-  } else {
-    console.log("aucun resultat trouvé");
-    console.table(stagiares);
-  }
-  tableau_cherche.style.display = "block";
+    tableau_cherche.style.display = "block";
+    document.getElementById("message_error").innerHTML=""
   result.forEach((element) => {
     tbody.innerHTML += `<tr>
                                     <td>${element.Nomcomplet}</td>
@@ -152,4 +157,9 @@ btn_valid_cherche.addEventListener("click", () => {
                                     <td>${element.note}</td>
                                 </tr>`;
   });
+  } else {
+    document.getElementById("message_error").innerHTML="aucun resultat trouvé"
+    document.getElementById("message_error").style.color="red"
+    tbody.innerHTML ="" 
+  }
 });
