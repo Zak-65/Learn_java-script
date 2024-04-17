@@ -25,12 +25,12 @@ const form_display = document.getElementById("form_gestion_stagaire");
 const part_recherche = document.getElementById("part_recherche");
 
 // function details gestion
-const totalStagiares = document.getElementById("");
+const totalStagiares = document.getElementById("nbr_stagiare");
+console.log(totalStagiares)
 let avgStagiares = document.getElementById("avg_note_affichage")
 let total_avg = 0
-document.addEventListener(
-  "DOMContentLoaded",
-  () => (totalStagiares.innerHTML = stagiares.length)
+document.addEventListener("DOMContentLoaded",
+() => (totalStagiares.innerHTML =`Stagiare n°: ${stagiares.length}`)
 );
 
 //----------------- Part for ajouter --------------------------
@@ -96,7 +96,7 @@ btn_Send.addEventListener("click", () => {
     stagiares.push(stagiare);
     console.log(stagiare);
     console.log(stagiares);
-    totalStagiares.innerHTML = `Stagaire N°: ${stagiares.length}`;
+    totalStagiares.innerHTML = `Stagiare n°: ${stagiares.length}`;
     stagiares.forEach((element)=>{
       total_avg = total_avg + Number(element.note)})
     console.log(total_avg)
