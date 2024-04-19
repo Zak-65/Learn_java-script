@@ -1,5 +1,31 @@
 let stagiare = {};
-const stagiares = [];
+const stagiares = [
+  {
+      Nomcomplet: "sidqui zakaria",
+      cin: "bl21",
+      Age: "21",
+      Matier: "javaScript",
+      Numerocontrole: 1,
+      note: 21
+  },
+  {
+      Nomcomplet: "khalid marzoug",
+      cin: "bl22",
+      Age: "22",
+      Matier: "javaScript",
+      Numerocontrole: 1,
+      note:18
+  },
+  {
+      Nomcomplet: "anas mahfoud",
+      cin: "bl21",
+      Age: "22",
+      Matier: "php",
+      Numerocontrole: 1,
+      note: 19
+  }
+];
+;
 //Declaration Value forms
 const nomComplet = document.getElementById("nomC_inpt");
 const cin = document.getElementById("cin_inpt");
@@ -20,13 +46,13 @@ const tbody = document.querySelector("tbody");
 const bnt_ajouter = document.getElementById("btn_ajouter");
 const bnt_recherche = document.getElementById("bnt_recherche");
 const btn_Send = document.getElementById("btn_Send");
+const btn_modifier=document.getElementById("btn_modifier");
 // Declaration items
 const form_display = document.getElementById("form_gestion_stagaire");
 const part_recherche = document.getElementById("part_recherche");
 
 // function details gestion
 const totalStagiares = document.getElementById("nbr_stagiare");
-console.log(totalStagiares)
 let avgStagiares = document.getElementById("avg_note_affichage")
 let total_avg = 0
 document.addEventListener("DOMContentLoaded",
@@ -158,8 +184,20 @@ btn_valid_cherche.addEventListener("click", () => {
                                 </tr>`;
   });
   } else {
-    document.getElementById("message_error").innerHTML="aucun resultat trouvé"
-    document.getElementById("message_error").style.color="red"
+    document.getElementById("message_error_rechercher").innerHTML="aucun resultat trouvé"
+    document.getElementById("message_error_rechercher").style.color="red"
     tbody.innerHTML ="" 
   }
+});
+//------------------------ part for modifier -------------------
+btn_modifier.addEventListener("click",()=>{
+  document.getElementById("message_error_modifier").innerHTML="selectioner une stagiare"
+  form_display.style.display = "none";
+  part_recherche.style.display = "none";
+  part_modifier.style.display="block"
+})
+bnt_recherche.addEventListener("click", () => {
+  part_recherche.style.display = "block";
+  bnt_recherche.style.background = "green";
+  bnt_ajouter.style.background = "";
 });

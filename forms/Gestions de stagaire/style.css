@@ -48,6 +48,12 @@ form{
     background-color:rgb(235, 135, 135);
     height:30vh;
 }
+#part_modifier{
+    display:none;
+    text-align: center;
+    background-color:rgb(235, 135, 135);
+    height:30vh; 
+}
 #form_gestion_stagaire{
     display: none;
 }

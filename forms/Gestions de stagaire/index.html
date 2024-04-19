@@ -29,7 +29,7 @@
         <div class="d-flex justify-content-evenly w-50" id="btn_container_crud">
           <button class="btn btn-primary" id="btn_ajouter">Ajouter</button>
           <button class="btn btn-primary" id="bnt_recherche">Rechercher</button>
-          <button class="btn btn-primary">Modifier</button>
+          <button class="btn btn-primary" id="btn_modifier">Modifier</button>
           <button class="btn btn-primary">Supprimer</button>
         </div>
         <!-- part ajouter -->
@@ -69,7 +69,12 @@
           <input id="rechercher_cin_input" class="mt-4" type="text" placeholder="entre CIN :" />
           <input id="rechercher_note_input" class="mt-4" type="number" placeholder="entre Note :" />
           <input id="btn_valid_cherche" class="btn btn-primary w-50 mt-2" value="Chercher" type="button"/>
-          <h1 id="message_error"></h1>
+          <h1 id="message_error_rechercher"></h1>
+        </section>
+        <!-- part modifier -->
+        <section class="mt-5 w-100 text-center" id="part_modifier">
+          <input id="btn_enregistre_modification" class="btn btn-primary w-25 mt-2" value="Enregistre" type="button"/>
+          <h1 id="message_error_modifier"></h1>
         </section>
       </aside>
     </main>
