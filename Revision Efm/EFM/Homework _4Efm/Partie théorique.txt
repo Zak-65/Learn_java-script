@@ -1,0 +1,19 @@
+1:java script est un langague de programation interprete execute sur cotte client qui rendre le site web interactive est dynamique
+
+2:javaScript execute  sur cotte client est java sur cote serveur peut comuniquer avec la machine 
+
+3:Le bon endroit pour placer le script est juste avant la fermeture de la balise <body>
+        afin d'éviter que le HTML ne soit pas téléchargé. 
+
+4: true
+    true
+5:  0,4,6,6.
+    1,4,12,6.
+    2,4,18,6.
+6:      let number= 4
+        let cmpt = 1
+        for(let i=0;i<4;i++){
+            cmpt+=cmpt*i
+        }
+        console.log(cmpt)
+7:        

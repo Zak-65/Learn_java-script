@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Efm #4</title>
+  </head>
+  <body class="vh-100 ">
+    <h1 class="text-center">Notes des stagiares</h1>
+    <fieldset class="w-75 h-50 p-3  border border-2 border-black rounded mx-auto bg-info">
+      <legend>Nouvelle ligne</legend>
+      <form class="d-flex flex-column h-75 justify-content-between">
+        <div>
+          <label for="id">ID :</label>
+          <input type="number" id="id" />
+          <input class="btn btn-primary" type="button" value="Lire" id="lire" />
+        </div>
+        <div>
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" />
+        </div>
+        <div id="container_filiere">
+          <label for="filiere">Filiere :</label>
+          <input type="radio" id="tdi" name="filiere" />
+          <label for="tdi">TDI</label>
+          <input type="radio" id="tdm" name="filiere" />
+          <label for="tdi">TDM</label>
+          <input type="radio" id="tri" name="filiere" />
+          <label for="tdi">TRI</label>
+        </div>
+        <div>
+          <label for="note">Note :</label>
+          <input type="number" id="note" />
+        </div>
+        <input class="btn btn-warning w-25 " type="button" value="Ajouter la note" id="btn_ajouter_note" />
+      </form>
+    </fieldset>
+    <h2 class="text-center">Listes des notes</h2>
+    <table class="table table-dark">
+        <thead class="text-center"> 
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Note</th>
+                <th>Filere</th>
+                <th>Gestion</th>
+            </tr>
+        </thead>
+        <tbody class="text-center" id="tbody">
+            <tr id="1">
+                <td>1</td>
+                <td>Alami hicham</td>
+                <td>8</td>
+                <td>TDI</td>
+                <td><input type="button" class="btn_supprimer" value="Supprimer" ></td>
+
+            </tr>
+        </tbody>
+        <tfoot class="text-center">
+            <tr>
+                <td colspan="2" class="fw-bold">La meilleure Note :</td>
+                <td id="total">0</td>
+            </tr>
+        </tfoot>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
