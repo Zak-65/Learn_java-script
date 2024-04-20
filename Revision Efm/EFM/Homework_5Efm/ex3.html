@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Create the document elements
+        const body = document.body;
+        
+        // Create body elements
+        const mainBlock = body.appendChild(document.createElement('div'));
+        mainBlock.setAttribute('class', 'main-block');
+        
+        const leftPart = mainBlock.appendChild(document.createElement('div'));
+        leftPart.setAttribute('class','left-part');
+        const h1LeftPart = leftPart.appendChild(document.createElement('h1'));
+        h1LeftPart.textContent = 'Vous enregistrer au cours';
+        
+        const form = mainBlock.appendChild(document.createElement('form'));
+        
+        const titleDiv = form.appendChild(document.createElement('div'));
+        titleDiv.setAttribute('class', 'title');
+        const h2Title = titleDiv.appendChild(document.createElement('h2'));
+        h2Title.textContent = 'Inscrivez-vous ici';
+        
+        const infoDiv = form.appendChild(document.createElement('div'));
+        infoDiv.setAttribute('class', 'info');
+        
+        const inputName = infoDiv.appendChild(document.createElement('input'));
+        inputName.setAttribute('type', 'text');
+        inputName.setAttribute('name', 'name');
+        inputName.setAttribute('placeholder', 'Nom complet');
+        
+        const inputMail = infoDiv.appendChild(document.createElement('input'));
+        inputMail.setAttribute('type', 'text');
+        inputMail.setAttribute('name', 'mail');
+        inputMail.setAttribute('placeholder', 'Email');
+        
+        const inputTel = infoDiv.appendChild(document.createElement('input'));
+        inputTel.setAttribute('type', 'text');
+        inputTel.setAttribute('name', 'tel');
+        inputTel.setAttribute('placeholder', 'Numéro de téléphone');
+        
+        const select = infoDiv.appendChild(document.createElement('select'));
+        
+        const option1 = select.appendChild(document.createElement('option'));
+        option1.setAttribute('value', 'course-type');
+        option1.setAttribute('selected', '');
+        option1.textContent = 'Type de cours*';
+        
+        const option2 = select.appendChild(document.createElement('option'));
+        option2.setAttribute('value', 'short-courses');
+        option2.textContent = 'cours courts';
+        
+        const option3 = select.appendChild(document.createElement('option'));
+        option3.setAttribute('value', 'featured-courses');
+        option3.textContent = 'Cours facturé';
+        
+        const btnEnvoyer = form.appendChild(document.createElement('input'));
+        btnEnvoyer.setAttribute('type', 'button');
+        btnEnvoyer.setAttribute('class', 'btn btn-success');
+        btnEnvoyer.setAttribute('id', 'btn_envoyer');
+        btnEnvoyer.setAttribute('value', 'Envoyer');
+        
+        const bodyContentString = body.innerHTML;
+        
+        console.log(bodyContentString);
+
+        // _________________ creation Css___________________
+        document.addEventListener("DOMContentLoaded", function() {
+  // Select elements
+  const mainBlock = document.querySelector(".main-block");
+  const leftPart = document.querySelector(".left-part");
+  const form = document.querySelector("form");
+  const title = document.querySelector(".title");
+  const info = document.querySelector(".info");
+  const inputs = document.querySelectorAll("input");
+  const select = document.querySelector("select");
+  const button = document.querySelector("input[type='button']");
+ 
+  // Apply styles
+  mainBlock.style.display = "flex";
+  mainBlock.style.flexDirection = "column";
+  mainBlock.style.justifyContent = "center";
+  mainBlock.style.alignItems = "center";
+  mainBlock.style.height = "100%";
+  mainBlock.style.padding = "25px";
+ 
+  leftPart.style.padding = "25px";
+  leftPart.style.textAlign = "center";
+ 
+  form.style.padding = "25px";
+  form.style.background = "rgba(0, 0, 0, 0.1)";
+ 
+  title.style.display = "flex";
+  title.style.alignItems = "center";
+  title.style.marginBottom = "20px";
+ 
+  info.style.display = "flex";
+  info.style.flexDirection = "column";
+ 
+  inputs.forEach(input => {
+    input.style.padding = "5px";
+    input.style.marginBottom = "30px";
+    input.style.background = "transparent";
+    input.style.border = "none";
+    input.style.borderBottom = "1px solid black";
+  });
+ 
+  select.style.padding = "5px";
+  select.style.marginBottom = "30px";
+  select.style.background = "transparent";
+  select.style.border = "none";
+  select.style.borderBottom = "1px solid black";
+ 
+  button.style.width = "100%";
+});
+        </script>
+</body>
+</html>

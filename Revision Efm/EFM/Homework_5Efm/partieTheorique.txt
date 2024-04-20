@@ -1,0 +1,14 @@
+Exercice1:
+
+1):la balise script
+2):la section <body>
+3):false
+4):document.getElementById("maDiv").addEventLister("click",alert("message"))
+5):ch.toLowwerCase()
+6):+
+7):FP
+8):for(var i in T)
+9):$("span").css("background-color","blue");
+10):$.post(dataType:"xml",url:"script.php",function(){...});
+
+
