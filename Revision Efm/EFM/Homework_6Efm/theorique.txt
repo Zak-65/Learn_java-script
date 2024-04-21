@@ -1,0 +1,5 @@
+1):L
+2):ch1.toUpperCase()
+3):document.getElementsByTagName('p')[0].innerHTML="hello world"
+4):$("span").css("backgroud-color","blue");
+5):$.ajax({url:"test.html",success:function(data){console.log(data)}})

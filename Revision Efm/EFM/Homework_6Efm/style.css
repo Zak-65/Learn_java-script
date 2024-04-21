@@ -1,0 +1,29 @@
+h2{
+    text-align:center;
+}
+form{
+    border-radius:10px;
+    background-color:burlywood;
+    border: solid 2px;
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    height:80vh;
+    margin: auto;
+    padding:10px;
+    gap:7px;
+}
+#containerBtn{
+    margin: auto;
+}
+#containerBtn>input{
+    width:150px;
+    background-color: rgb(0, 102, 255);
+    border: none;
+    height:40px;
+    border-radius:10px;
+    font-weight: bold;
+}
+table{
+    display: none;
+}
