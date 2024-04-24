@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing json</title>
+</head>
+<body>
+    <select id="selectProf">
+        <option value="">select prof</option>
+    </select>
+    <select id="selectBranche">
+        <option value="">branche</option>
+    </select>
+    <script>
+        let donne = {prof:{key:"val",nom:"zak"}}
+        let donnes = JSON.stringify(donne)
+        function loadData(){
+            let data = new  XMLHttpRequest();
+            data.open('POST','https://getpantry.cloud/apiv1/pantry/7cc2178f-af4a-4d0a-aef5-3eb69981b61a/basket/testing',true);
+            data.setRequestHeader('content-type','application/json')
+            data.send(donnes)
+        }
+        loadData()
+    </script>
+</body>
+</html>
