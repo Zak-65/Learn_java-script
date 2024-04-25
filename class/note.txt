@@ -1,0 +1,20 @@
+class Perssone{
+	constructor(id){
+	this.id=id
+}
+	presentez_vous(){
+	return ""this is methode
+}
+}
+
+//-------Heritage------
+
+class Persone2 extends Perssone{
+	contructor(id,nom){
+		super(id);
+		this.nom=nom	
+}
+	presentezVous(){
+	return supper.presenter_vous()
+}
+}
