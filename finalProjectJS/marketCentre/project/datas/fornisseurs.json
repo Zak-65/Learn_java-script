@@ -1,0 +1,19 @@
+{
+    "fornisseurs":{
+        "sidi Ali":{
+            "sidi Ali 2L":"6",
+            "sidi Ali 33":"2",
+            "sidi Ali 50":"3"
+        },
+        "pepsi":{
+            "pepsi 33":"10",
+            "lays":"20",
+            "doritos":22
+        },
+        "coca":{
+            "ciel33":"2,5",
+            "ciel50":"3",
+            "cocaMaxi":"5"
+        }
+    }
+}
