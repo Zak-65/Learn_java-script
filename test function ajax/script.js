@@ -18,15 +18,10 @@ function getSetdata(methode, url, data) {
       }
     };
     xhr.send(d);
-    setTimeout(()=>{
-        console.log(da)
-        return da
-    },2000)
   }
   
   let test = { val: "zak" };
   let url ="https://getpantry.cloud/apiv1/pantry/7cc2178f-af4a-4d0a-aef5-3eb69981b61a/basket/test";
-  
   document.getElementById("test").addEventListener("click",()=>{
       getSetdata("GET",url);
   })

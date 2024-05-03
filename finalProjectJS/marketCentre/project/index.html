@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="h-full bg-gray-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Market Centre</title>
+</head>
+<body >
+        <header>
+            <nav class="bg-gray-800">
+              <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 items-center justify-between">
+                  <div class="flex items-center">
+                    <!-- part logo -->
+                    <div class="flex-shrink-0">
+                      <img class="h-6 w-13" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                    </div>
+                    <!-- part menu -->
+                    <div class="hidden md:block">
+                      <div class="ml-10 flex items-baseline space-x-4">
+                        <a  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium  focus:bg-slate-200 focus:text-gray-900">Dashboard</a>
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium  focus:bg-slate-200 focus:text-gray-900">Stock</a>
+                        <a id="btnCommandes" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium  focus:bg-slate-200 focus:text-gray-900">commandes</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden md:block">
+                    <!-- part notification -->
+                    <div class="ml-4 flex items-center md:ml-6">
+                      <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <span class="absolute -inset-1.5"></span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                        </svg>
+                      </button>
+          
+                      <!-- part Profile -->
+                      <div class="relative ml-3">
+                        <div>
+                          <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                            <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+              </div>
+            </nav>
+        </header>
+        <main class="bg-cover h-[90vh]" style="background-image:url(../assets/background.jpg);">
+        <section class="flex h-[90vh] hidden" id="container_pass_commandes">
+            <!-- part passe une commande -->
+            <article class="bg-gray-500 w-[60%] m-2 rounded-3xl ">
+                <h1 class="font-bold text-center mt-3 text-white text-2xl" >Entre votre commande :</h1>
+                <form class=" font-semibold w-[80%] m-auto h-[85%] mt-3">
+                    <!-- part article -->
+                    <h1 class="text-lg">Article :</h1>
+                    <div class="inline-block relative w-60 mt-3">
+                        <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                          <option value="">Selectioner Une fornisseur</option>
+                          <option value="sidiAli" >Sidi Ali</option>
+                          <option value="boustane">Boustane</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                      </div>
+                    <!-- part type  -->
+                    <h1 class="text-lg mt-3">selectioner un produit  :</h1>
+                    <div class="inline-block relative w-60 mt-3">
+                        <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                          <option>Selection Une type</option>
+                          <option>Sidi Ali 33</option>
+                          <option>sidi Ali 2L</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                      </div>
+                      <!-- partie date livraison -->
+                      <h1 class="text-lg mt-3">Date pour livraison :</h1>
+                      <input type="date" class="mt-3 w-60 rounded h-9 text-center">
+                      <!-- part qantite -->
+                      <h1 class="text-lg mt-3">Entre Quantité:</h1>
+                      <div class="relative flex items-center m-4">
+                       
+                        <input type="number" id="counter-input" min="0" max="20" value="1" class="rounded text-center w-20" required />
+                      
+                    </div>
+                      <!-- button envoie -->
+                      <div>
+                        <button class="mt-3 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                            <span class="text-center w-60">Ajouter</span>
+                          </button>
+                          <button class="mt-3 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                            <span class="text-center w-60">Confirmer</span>
+                          </button>
+                    </div>
+                </form>
+            </article>
+            <!-- part Facture -->
+            <article class="bg-gray-600 w-[40%] m-2 rounded-3xl relative ">
+                <h1 class="font-bold text-center text-white text-2xl mt-3" >Totale :</h1>
+                <ul class="max-w-md divide-y-2 divide-gray-200 dark:divide-gray-700 m-auto">
+                    <li class="m-2">
+                        <p class="font-bold">Sidi Ali</p>
+                        <div class="flex justify-between">
+                            <div>
+                                <p>Sidi Ali pack 33*12</p>
+                            <p>Qte :</p>
+                            </div>
+                            <p>22 Dhs</p>
+                        </div>
+                    </li>
+                    <li class="m-2">
+                        <p class="font-bold">Sidi Ali</p>
+                        <div class="flex justify-between">
+                            <div>
+                                <p>Sidi Ali pack 33*12</p>
+                            <p>Qte :</p>
+                            </div>
+                            <p>22 Dhs</p>
+                        </div>
+                    </li>
+                    <li class="m-2">
+                        <p class="font-bold">Sidi Ali</p>
+                        <div class="flex justify-between">
+                            <div>
+                                <p>Sidi Ali pack 33*12</p>
+                            <p>Qte :</p>
+                            </div>
+                            <p>22 Dhs</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="h-[20%] w-[100%]  absolute bottom-0">
+                    <hr class="h-1 w-[90%] rounded m-auto bg-gray-800 border-0">
+                    <div class="flex justify-between m-8">
+                        <p class="font-semibold text-lg">Totale :</p>
+                        <p class="font-bold text-lg">2000 DHs</p>
+                    </div>
+                </div>       
+            </article>
+        </section>
+    </main>
+<script src="script.js" ></script>
+</body>
+</html>
