@@ -6,11 +6,13 @@ document.getElementById("btnCommandes").addEventListener("click",()=>{
 // --------------class-------------------
 let commandes = []
 class commande{
-    constructor(fornisseur,produit,dateL,qte){
+    constructor(fornisseur,produit,dateL,prix,qte){
         this.fornisseur = fornisseur
         this.produit = produit
         this.dateL = dateL
+        this.prix = prix
         this.qte = qte
+        
     }
 
 }
@@ -22,6 +24,7 @@ const input_quntite = getE("counter-input")
 const btn_ajouter = getE("btn_ajouter")
 const btn_confirmer = getE("btn_confirmer")
 const input_prix = getE("prix")
+const totalPrix = getE("totalPrix")
 
 //-------------- chargemant de donnes----------------
 // ____________fornisseur
@@ -91,21 +94,34 @@ function getE(a){
 }
 // ------------part pass commandes -----------------------
 btn_ajouter.addEventListener("click",()=>{
-    commandes.push(new commande(input_fornisseur.value,input_article.value,input_dateL.value,input_quntite.value))
+    commandes.push(new commande(input_fornisseur.value,input_article.value,input_dateL.value,input_prix.value,input_quntite.value))
     console.log(commandes)
 })
 
     // ------------part affichage facture------------------
-// const affichage_facture = getE("affichage_facture")
-// commandes.forEach((element)=>{
-//     affichage_facture.innerHTML+=`<li class="m-2">
-//                                         <p class="font-bold">${element.fornisseur}</p>
-//                                         <div class="flex justify-between">
-//                                             <div>
-//                                                 <p>${element.produit}</p>
-//                                             <p>Qte : ${element.qte}</p>
-//                                             </div>
-//                                             <p>22 Dhs</p>
-//                                         </div>
-//                                 </li>`
-// })    
+const affichage_facture = getE("affichage_facture")
+btn_confirmer.addEventListener("click",()=>{
+    let tPrix = 0
+    affichage_facture.innerHTML=""
+    commandes.forEach((element)=>{
+        tPrix += Number(element.prix)*Number(element.qte)
+        affichage_facture.innerHTML+=`<li class="m-2">
+                                            <div class="flex justify-between">
+                                            <p class="font-bold">${element.fornisseur}</p>
+                                            <button>
+                                            <i class="fa-solid fa-trash text-red-500 "></i>
+                                            </button>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <p>${element.produit}</p>
+                                                <p>Qte : ${element.qte} x ${element.prix} Dhs</p>
+                                                </div>
+                                                <p class="mt-6">${element.prix*element.qte}Dhs</p>
+                                            </div>
+                                    </li>`
+    })
+    console.log(tPrix)
+    totalPrix.textContent= tPrix
+}) 
+
