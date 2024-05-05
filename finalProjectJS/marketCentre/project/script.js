@@ -1,6 +1,17 @@
 // change page menu 
 document.getElementById("btnCommandes").addEventListener("click",()=>{
     document.getElementById("container_pass_commandes").classList.remove("hidden")
+    document.getElementById("container_gestion_stock").classList.add("hidden")
+})
+
+document.getElementById("btnStock").addEventListener("click",()=>{
+    document.getElementById("container_pass_commandes").classList.add("hidden")
+
+})
+document.getElementById("btnDashboard").addEventListener("click",()=>{
+    document.getElementById("container_gestion_stock").classList.remove("hidden")
+    document.getElementById("container_pass_commandes").classList.add("hidden")
+    
 })
 // declaration 
 // --------------class-------------------
@@ -95,7 +106,6 @@ function getE(a){
 // ------------part pass commandes -----------------------
 btn_ajouter.addEventListener("click",()=>{
     commandes.push(new commande(input_fornisseur.value,input_article.value,input_dateL.value,input_prix.value,input_quntite.value))
-    console.log(commandes)
 })
 
     // ------------part affichage facture------------------
@@ -109,7 +119,7 @@ btn_confirmer.addEventListener("click",()=>{
                                             <div class="flex justify-between">
                                             <p class="font-bold">${element.fornisseur}</p>
                                             <button>
-                                            <i class="fa-solid fa-trash text-red-500 "></i>
+                                            <i class="fa-solid fa-trash text-red-500 btn_trash "></i>
                                             </button>
                                             </div>
                                             <div class="flex justify-between">
@@ -120,8 +130,12 @@ btn_confirmer.addEventListener("click",()=>{
                                                 <p class="mt-6">${element.prix*element.qte}Dhs</p>
                                             </div>
                                     </li>`
+                                    console.log(document.getElementsByClassName("btn_trash"))
     })
-    console.log(tPrix)
     totalPrix.textContent= tPrix
 }) 
+
+// ------------Fin part pass commandes -----------------------
+
+// ------------part gestion stock -----------------------
 
