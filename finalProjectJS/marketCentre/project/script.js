@@ -38,7 +38,7 @@ const input_prix = getE("prix")
 const totalPrix = getE("totalPrix")
 
 //-------------- chargemant de donnes----------------
-// ____________fornisseur
+// ____________fornisseur_______________
 document.addEventListener("DOMContentLoaded",()=>{
     let urlF ="https://getpantry.cloud/apiv1/pantry/7cc2178f-af4a-4d0a-aef5-3eb69981b61a/basket/fornisseurs"
     let xhr = new XMLHttpRequest
@@ -104,13 +104,15 @@ function getE(a){
     return document.getElementById(a)
 }
 // ------------part pass commandes -----------------------
-btn_ajouter.addEventListener("click",()=>{
+btn_ajouter.addEventListener("click",(e)=>{
+    e.preventDefault()
     commandes.push(new commande(input_fornisseur.value,input_article.value,input_dateL.value,input_prix.value,input_quntite.value))
 })
 
     // ------------part affichage facture------------------
 const affichage_facture = getE("affichage_facture")
-btn_confirmer.addEventListener("click",()=>{
+btn_confirmer.addEventListener("click",(e)=>{
+    e.preventDefault()
     let tPrix = 0
     affichage_facture.innerHTML=""
     commandes.forEach((element)=>{

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html class="h-full bg-gray-100">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -10,243 +10,426 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Market Centre</title>
-</head>
-<body class="bg-cover bg-center h-screen bg-[url(../assets/background.jpg)] " >
-        <header>
-            <nav class="bg-gray-800">
-              <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="flex h-16 items-center justify-between">
-                  <div class="flex items-center">
-                    <!-- part logo -->
-                    <div class="flex-shrink-0">
-                      <img class="h-6 w-13" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-                    </div>
-                    <!-- part menu -->
-                    <div class="hidden md:block">
-                      <div class="ml-10 flex items-baseline space-x-4">
-                        <a tabindex="-1" id="btnDashboard" class="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium  focus:bg-slate-200 focus:text-gray-900">Dashboard</a>
-                        <a tabindex="-1" id="btnStock" class="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium  focus:bg-slate-200 focus:text-gray-900">Stock</a>
-                        <a tabindex="-1" id="btnCommandes" class="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium  focus:bg-slate-200 focus:text-gray-900">commandes</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="hidden md:block">
-                    <!-- part notification -->
-                    <div class="ml-4 flex items-center md:ml-6">
-                      <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                        <span class="absolute -inset-1.5"></span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-                        </svg>
-                      </button>
-          
-                      <!-- part Profile -->
-                      <div class="relative ml-3">
-                        <div>
-                          <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                            <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+  </head>
+  <body class="bg-cover bg-center h-screen bg-[url(../assets/background.jpg)]">
+    <header class="">
+      <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <div class="flex items-center">
+              <!-- part logo -->
+              <div class="flex-shrink-0">
+                <img
+                  class="h-6 w-13"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  alt="Your Company"
+                />
+              </div>
+              <!-- part menu -->
+              <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                  <a
+                    tabindex="-1"
+                    id="btnDashboard"
+                    class="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium focus:bg-slate-200 focus:text-gray-900"
+                    >Dashboard</a
+                  >
+                  <a
+                    tabindex="-1"
+                    id="btnStock"
+                    class="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium focus:bg-slate-200 focus:text-gray-900"
+                    >Stock</a
+                  >
+                  <a
+                    tabindex="-1"
+                    id="btnCommandes"
+                    class="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium focus:bg-slate-200 focus:text-gray-900"
+                    >commandes</a
+                  >
                 </div>
+              </div>
             </div>
-              </div>
-            </nav>
-        </header>
-        <main class="h-[83%]">
-        <section class="flex h-[100%] hidden  " id="container_pass_commandes">
-            <!-- part passe une commande -->
-            <article class="bg-[#00000080] w-[60%] m-2 rounded-md ">
-                <h1 class="font-bold text-center mt-3 text-white text-2xl" >Entre votre commande :</h1>
-                <form class=" font-semibold w-[80%] m-auto h-[85%] mt-3">
-                    <!-- part article -->
-                    <h1 class="text-lg">Article :</h1>
-                    <div class="inline-block relative w-60 mt-3">
-                        <select id="select_fornisseur" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                            <option>Selectioner un fornisseur</option>
-                        </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                        </div>
-                      </div>
-                    <!-- part type  -->
-                    <h1 class="text-lg mt-3">selectioner un produit  :</h1>
-                    <div class="inline-block relative w-60 mt-3">
-                        <select id="select_produit" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                          <option>Selection Une type</option>
-                        </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                        </div>
-                      </div>
-                      <!-- partie date livraison -->
-                      <h1 class="text-lg mt-3">Date pour livraison :</h1>
-                      <input id="dateL" type="date" class="mt-3 w-60 rounded h-9 text-center">
-                      <!-- part qantite -->
-                      <h1 class="text-lg mt-3">Entre Quantité:</h1>
-                      <div class="relative flex items-center m-4">
-                        <input disabled type="number" id="prix" class="rounded text-center w-20"/>
-                        <p class="ml-3 font-bold  text-xl">X</p>
-                        <input type="number" id="counter-input" min="0" max="20" value="1" class="rounded text-center w-20 ml-4 " required />
-                    </div>
-                      <!-- button envoie -->
-                      <div>
-                        <button id="btn_ajouter" class="mt-3 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-                            <span class="text-center w-60">Ajouter</span>
-                          </button>
-                          <button id="btn_confirmer" class="mt-3 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-                            <span class="text-center w-60">Confirmer</span>
-                          </button>
-                    </div>
-                </form>
-            </article>
-            <!-- part Facture -->
-            <article class=" bg-[#00000070] shadow-[0_0_20px_2px] w-[40%] m-2 rounded-md relative ">
-                <h1 class="font-medium text-center text-white text-xl mt-3" >Totale :</h1>
-                <ul id="affichage_facture" class="max-w-md divide-y-2 divide-gray-200 dark:divide-gray-700 m-auto">
-                </ul>
-                <div class="h-[20%] w-[100%]  absolute bottom-0">
-                    <hr class="h-1 w-[90%] rounded m-auto bg-gray-800 border-0">
-                    <div class="flex justify-between m-8">
-                        <p class="font-semibold text-lg">Totale :</p>
-                        <p class="font-bold text-lg"><span id="totalPrix">0</span>Dhs</p>
-                    </div>
-                </div>       
-            </article>
-        </section>
-        <!-- part gestion stock -->
-        <section class="h-[100%] hidden" id="container_gestion_stock" >
-          <div class="flex-grow text-gray-800">
-            <main class=" h-1 sm:p-3 space-y-2">
-              <div class="flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between">
-                <div class="flex flex-wrap items-start justify-end -mb-3">    
-                </div>
-              </div>
-              <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-                <div class="flex items-center p-8 bg-white shadow rounded-lg">
-                  <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6">
-                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="block text-2xl font-bold">62</span>
-                    <span class="block text-gray-500">Students</span>
-                  </div>
-                </div>
-                <div class="flex items-center p-8 bg-white shadow rounded-lg">
-                  <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-green-600 bg-green-100 rounded-full mr-6">
-                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="block text-2xl font-bold">6.8</span>
-                    <span class="block text-gray-500">Average mark</span>
-                  </div>
-                </div>
-                <div class="flex items-center p-8 bg-white shadow rounded-lg">
-                  <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-red-600 bg-red-100 rounded-full mr-6">
-                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="inline-block text-2xl font-bold">9</span>
-                    <span class="inline-block text-xl text-gray-500 font-semibold">(14%)</span>
-                    <span class="block text-gray-500">Underperforming students</span>
-                  </div>
-                </div>
-                <div class="flex items-center p-8 bg-white shadow rounded-lg">
-                  <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-100 rounded-full mr-6">
-                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="block text-2xl font-bold">83%</span>
-                    <span class="block text-gray-500">Finished homeworks</span>
-                  </div>
-                </div>
-              </section>
-              <section class="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-6 h-[60vh]">
-                <div class="flex flex-col md:col-span-2 md:row-span-2 bg-white shadow rounded-lg h-[139%] ">
-                  <div class="px-6 py-5 font-semibold border-b border-gray-100">The number of applied and left students per month</div>
-                  <div class="p-4 flex-grow">
-                    <div class="flex items-center justify-center h-full px-4 py-16 text-gray-400 text-3xl font-semibold bg-gray-100 border-2 border-gray-200 border-dashed rounded-md">Chart</div>
-                  </div>
-                </div>
+            <div class="hidden md:block">
+              <!-- part notification -->
+              <div class="ml-4 flex items-center md:ml-6">
+                <button
+                  type="button"
+                  class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                >
+                  <span class="absolute -inset-1.5"></span>
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                    />
+                  </svg>
+                </button>
 
-                <div class="row-span-3 h-[90%] bg-white shadow rounded-lg">
-                  <div class="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100">
-                    <span>Students by average mark</span>
-                    <button type="button" class="inline-flex justify-center rounded-md px-1 -mr-1 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-600" id="options-menu" aria-haspopup="true" aria-expanded="true">
-                      Descending
-                      <svg class="-mr-1 ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                      </svg>
+                <!-- part Profile -->
+                <div class="relative ml-3">
+                  <div>
+                    <button
+                      type="button"
+                      class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                      id="user-menu-button"
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                    >
+                      <img
+                        class="h-8 w-8 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
                     </button>
                   </div>
-                  <div class="overflow-y-scroll h-[70%]" style="max-height: 24rem;">
-                    <ul class="p-6 space-y-6">
-                      <li class="flex items-center">
-                        <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                          <img src="https://randomuser.me/api/portraits/women/82.jpg" alt="Annette Watson profile picture">
-                        </div>
-                        <span class="text-gray-600">Annette Watson</span>
-                        <span class="ml-auto font-semibold">9.3</span>
-                      </li>
-                      <li class="flex items-center">
-                        <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                          <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Calvin Steward profile picture">
-                        </div>
-                        <span class="text-gray-600">Calvin Steward</span>
-                        <span class="ml-auto font-semibold">8.9</span>
-                      </li>
-                      <li class="flex items-center">
-                        <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                          <img src="https://randomuser.me/api/portraits/men/80.jpg" alt="Ralph Richards profile picture">
-                        </div>
-                        <span class="text-gray-600">Ralph Richards</span>
-                        <span class="ml-auto font-semibold">8.7</span>
-                      </li>
-                      <li class="flex items-center">
-                        <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                          <img src="https://randomuser.me/api/portraits/men/79.jpg" alt="Bernard Murphy profile picture">
-                        </div>
-                        <span class="text-gray-600">Bernard Murphy</span>
-                        <span class="ml-auto font-semibold">8.2</span>
-                      </li>
-                      <li class="flex items-center">
-                        <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                          <img src="https://randomuser.me/api/portraits/women/78.jpg" alt="Arlene Robertson profile picture">
-                        </div>
-                        <span class="text-gray-600">Arlene Robertson</span>
-                        <span class="ml-auto font-semibold">8.2</span>
-                      </li>
-                      <li class="flex items-center">
-                        <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                          <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="Jane Lane profile picture">
-                        </div>
-                        <span class="text-gray-600">Jane Lane</span>
-                        <span class="ml-auto font-semibold">8.1</span>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
-                <div class="flex flex-col row-span-3 bg-white shadow rounded-lg h-[90%]">
-                  <div class="px-6 py-5 font-semibold border-b border-gray-100">Students by type of studying</div>
-                  <div class="p-4 flex-grow">
-                    <div class="flex items-center justify-center h-full px-4 py-24 text-gray-400 text-3xl font-semibold bg-gray-100 border-2 border-gray-200 border-dashed rounded-md">Chart</div>
-                  </div>
-                </div>
-              </section>
-            </main>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
+      </nav>
+    </header>
+    <main class="h-[83%]">
+      <section class="flex h-[100%] hidden" id="container_pass_commandes">
+        <!-- part passe une commande -->
+        <article class="bg-[#00000080] w-[60%] m-2 rounded-md">
+          <h1 class="font-bold text-center mt-3 text-white text-2xl">
+            Entre votre commande :
+          </h1>
+          <form class="font-semibold w-[80%] m-auto h-[85%] mt-3">
+            <!-- part article -->
+            <h1 class="text-lg">Article :</h1>
+            <div class="inline-block relative w-60 mt-3">
+              <select
+                id="select_fornisseur"
+                class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+              >
+                <option>Selectioner un fornisseur</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- part type  -->
+            <h1 class="text-lg mt-3">selectioner un produit :</h1>
+            <div class="inline-block relative w-60 mt-3">
+              <select
+                id="select_produit"
+                class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+              >
+                <option>Selection Une type</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- partie date livraison -->
+            <h1 class="text-lg mt-3">Date pour livraison :</h1>
+            <input
+              id="dateL"
+              type="date"
+              class="mt-3 w-60 rounded h-9 text-center"
+            />
+            <!-- part qantite -->
+            <h1 class="text-lg mt-3">Entre Quantité:</h1>
+            <div class="relative flex items-center m-4">
+              <input
+                disabled
+                type="number"
+                id="prix"
+                class="rounded text-center w-20"
+              />
+              <p class="ml-3 font-bold text-xl">X</p>
+              <input
+                type="number"
+                id="counter-input"
+                min="0"
+                max="20"
+                value="1"
+                class="rounded text-center w-20 ml-4"
+                required
+              />
+            </div>
+            <!-- button envoie -->
+            <div>
+              <button
+                id="btn_ajouter"
+                class="mt-3 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+              >
+                <span class="text-center w-60">Ajouter</span>
+              </button>
+              <button
+                id="btn_confirmer"
+                class="mt-3 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+              >
+                <span class="text-center w-60">Confirmer</span>
+              </button>
+            </div>
+          </form>
+        </article>
+        <!-- part Facture -->
+        <article
+          class="bg-[#00000070] shadow-[0_0_20px_2px] w-[40%] m-2 rounded-md relative"
+        >
+          <h1 class="font-medium text-center text-white text-xl mt-3">
+            Totale :
+          </h1>
+          <ul
+            id="affichage_facture"
+            class="max-w-md divide-y-2 divide-gray-200 dark:divide-gray-700 m-auto"
+          ></ul>
+          <div class="h-[20%] w-[100%] absolute bottom-0">
+            <hr class="h-1 w-[90%] rounded m-auto bg-gray-800 border-0" />
+            <div class="flex justify-between m-8">
+              <p class="font-semibold text-lg">Totale :</p>
+              <p class="font-bold text-lg"><span id="totalPrix">0</span>Dhs</p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- part gestion stock -->
+      <section class="h-[100%] hidden" id="container_gestion_stock">
+        <div class="flex-grow text-gray-800">
+          <main class="h-1 sm:p-3 space-y-2">
+            <div
+              class="flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between"
+            >
+              <div class="flex flex-wrap items-start justify-end -mb-3"></div>
+            </div>
+            <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+              <div class="flex items-center p-8 bg-white shadow rounded-lg">
+                <div
+                  class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-2xl font-bold">62</span>
+                  <span class="block text-gray-500">Students</span>
+                </div>
+              </div>
+              <div class="flex items-center p-8 bg-white shadow rounded-lg">
+                <div
+                  class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-green-600 bg-green-100 rounded-full mr-6"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-2xl font-bold">6.8</span>
+                  <span class="block text-gray-500">Average mark</span>
+                </div>
+              </div>
+              <div class="flex items-center p-8 bg-white shadow rounded-lg">
+                <div
+                  class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-red-600 bg-red-100 rounded-full mr-6"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span class="inline-block text-2xl font-bold">9</span>
+                  <span class="inline-block text-xl text-gray-500 font-semibold"
+                    >(14%)</span
+                  >
+                  <span class="block text-gray-500"
+                    >Underperforming students</span
+                  >
+                </div>
+              </div>
+              <div class="flex items-center p-8 bg-white shadow rounded-lg">
+                <div
+                  class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-100 rounded-full mr-6"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-2xl font-bold">83%</span>
+                  <span class="block text-gray-500">Finished homeworks</span>
+                </div>
+              </div>
+            </section>
+            <section
+              class="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-6 h-[60vh]"
+            >
+              <div
+                class="flex flex-col md:col-span-2 md:row-span-2 bg-white shadow rounded-lg h-[139%]"
+              >
+                <div class="px-6 py-5 font-semibold border-b border-gray-100">
+                  The number of applied and left students per month
+                </div>
+                <div class="p-4 flex-grow">
+                  <div
+                    class="flex items-center justify-center h-full px-4 py-16 text-gray-400 text-3xl font-semibold bg-gray-100 border-2 border-gray-200 border-dashed rounded-md"
+                  >
+                    Chart
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="row-span-3 h-[90%] bg-[#00000080] text-white shadow rounded-lg"
+              >
+                <div
+                  class="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100"
+                >
+                  <span>Students by average mark</span>
+                  <button
+                    type="button"
+                    class="inline-flex justify-center rounded-md px-1 -mr-1 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-600"
+                    id="options-menu"
+                    aria-haspopup="true"
+                    aria-expanded="true"
+                  >
+                    Descending
+                    <svg
+                      class="-mr-1 ml-1 h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="overflow-y-scroll h-[70%]"
+                  style="max-height: 24rem"
+                >
+                  <ul class="p-6 space-y-6">
+                    <li class="flex items-center">
+                      <div
+                        class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden"
+                      >
+                        <img
+                          src="https://randomuser.me/api/portraits/women/82.jpg"
+                          alt="Annette Watson profile picture"
+                        />
+                      </div>
+                      <span class="text-gray-600">Annette Watson</span>
+                      <span class="ml-auto font-semibold">9.3</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div
+                        class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden"
+                      >
+                        <img
+                          src="https://randomuser.me/api/portraits/men/81.jpg"
+                          alt="Calvin Steward profile picture"
+                        />
+                      </div>
+                      <span class="text-gray-600">Calvin Steward</span>
+                      <span class="ml-auto font-semibold">8.9</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="flex flex-col row-span-3 bg-white shadow rounded-lg h-[90%]"
+              >
+                <div class="px-6 py-5 font-semibold border-b border-gray-100">
+                  Students by type of studying
+                </div>
+                <div class="p-4 flex-grow">
+                  <div
+                    class="flex items-center justify-center h-full px-4 py-24 text-gray-400 text-3xl font-semibold bg-gray-100 border-2 border-gray-200 border-dashed rounded-md"
+                  >
+                    Chart
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </section>
+      <!-- part stock -->
+      <section>
+        <div id="chartContainer" class="bg-white"></div>
+      </section>
     </main>
     <!-- part footer -->
     <footer
@@ -255,15 +438,38 @@
       © 2024 : SIDQUI ZAKARIA |
       <a href="https://github.com/Zak-65" target="_blank">
         <i
-        class="fa-brands fa-github text-2xl hover:text-gray-700 cursor-pointer"
-      ></i>
+          class="fa-brands fa-github text-2xl hover:text-gray-700 cursor-pointer"
+        ></i>
       </a>
       <a href="" target="_blank">
         <i
-        class="fa-brands fa-linkedin text-2xl hover:text-gray-700 cursor-pointer"
-      ></i>
+          class="fa-brands fa-linkedin text-2xl hover:text-gray-700 cursor-pointer"
+        ></i>
       </a>
     </footer>
-<script src="script.js" ></script>
-</body>
+    <script>
+      window.onload = function() {
+      var chart = new CanvasJS.Chart("chartContainer", {
+        backgroundColor:null,
+        animationEnabled: true,
+        data: [{
+          type: "pie",
+          startAngle: 240,
+          yValueFormatString: "##0.00\"%\"",
+          indexLabel: "{label} {y}",
+          dataPoints: [
+            {y: 79.45,label: "Google"},
+            {y: 7.31, label: "Bing"},
+            {y: 7.06, label: "Baidu"},
+            {y: 4.91, label: "Yahoo"},
+            {y: 1.26, label: "Others"}
+          ]
+        }]
+      });
+      chart.render();
+      }
+      </script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
