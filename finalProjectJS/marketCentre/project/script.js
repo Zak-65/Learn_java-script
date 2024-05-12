@@ -1,16 +1,19 @@
 // change page menu 
 document.getElementById("btnCommandes").addEventListener("click",()=>{
     document.getElementById("container_pass_commandes").classList.remove("hidden")
+    document.getElementById("container_gestion_dashboard").classList.add("hidden")
     document.getElementById("container_gestion_stock").classList.add("hidden")
 })
 
 document.getElementById("btnStock").addEventListener("click",()=>{
-    document.getElementById("container_pass_commandes").classList.add("hidden")
-
-})
-document.getElementById("btnDashboard").addEventListener("click",()=>{
     document.getElementById("container_gestion_stock").classList.remove("hidden")
     document.getElementById("container_pass_commandes").classList.add("hidden")
+    document.getElementById("container_gestion_dashboard").classList.add("hidden")
+})
+document.getElementById("btnDashboard").addEventListener("click",()=>{
+    document.getElementById("container_gestion_dashboard").classList.remove("hidden")
+    document.getElementById("container_pass_commandes").classList.add("hidden")
+    document.getElementById("container_gestion_stock").classList.add("hidden")
     
 })
 // declaration 
@@ -141,3 +144,10 @@ btn_confirmer.addEventListener("click",(e)=>{
 
 // ------------part gestion stock -----------------------
 
+function test(e){
+    console.log(e.target)
+}
+
+document.onclick=function(event){
+    test(event)
+}
